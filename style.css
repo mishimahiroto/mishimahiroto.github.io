@@ -1,0 +1,642 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vh;
+    height: auto;
+    font-family: serif;
+}
+
+.line {
+    width: 0%;
+    height: 1px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    z-index: 3;
+}
+
+.up {
+    width: 100vw;
+    height: 50%;
+    background-color: #000;
+    position: fixed;
+    z-index: 2;
+    }
+
+.down {
+    width: 100vw;
+    height: 50%;
+    background-color: #000;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    }
+
+.header-bg {
+        height: 100vh;
+    }
+
+header {
+        height: 100vh;
+    }
+
+/* ヘッダートップ */
+.top-content {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 70px;
+    background: rgba(7,6,6,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-content {
+    display: flex;
+}
+
+.right-content {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 50px;
+    width: 600px;
+}
+
+.right-content p {
+    color: #FFF;
+    font-weight: bold;
+    font-size: large;
+}
+
+.right-content .button {
+    color: #FFF;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    /* width: 100px; */
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, 0.5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1);
+    text-align: center;
+    padding: 10px;
+    height: 45px;
+}
+
+.right-content .button:hover {
+    border-color: #FFF;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: transparent;
+    outline-offset: 12px;
+    text-shadow: 2px 2px 3px #000;
+}
+
+.icon-wrapper {
+    display: none;
+}
+
+.content-nav {
+    display: none;
+}
+
+i {
+    font-size: 1.5rem;
+    color: #8B0000;
+    display: block;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.owner-name {
+    margin-left: 20px;
+    color: #FFF;
+    font-size: large;
+}
+.typing {
+height: 100%;
+width: 100vw;
+position: relative;
+/* 自分のプロフィール画像 */
+background-image: url('images/nightview.jpg');
+background-size: 100vw 100vh;
+}
+
+.typed_wrap {
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(7, 6, 6, 0.5);
+}
+
+.typed_wrap h1 {
+    color: #FFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    height: 180px;
+    line-height: 180px;
+}
+
+.typed::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+}
+
+/* 何かわからん */
+@keyframes blink {
+    50%{opacity: 0;}
+}
+
+.bottom-text {
+    line-height: 2.5;
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+    color: #FFF;
+    font-size: large;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+    
+.self-introduction {
+    line-height: 2.5;
+    position: absolute;
+    right: 100px;
+    bottom: 70px;
+    color: #FFF;
+    font-size: large;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+/*メイン部分(共通項目)*/
+main {
+    padding: 50px;
+    width: 100vw;
+    /* background-color: rgba(20, 20, 20, 0.8); */
+    background-color: #FFFFFF;
+}
+
+.section {
+    margin-bottom: 0px;
+}
+
+.section h1 {
+    /* width: 300px; */
+    text-align: center;
+    color: #7B7B7B;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 50px;
+    padding: 10px;
+    border-bottom: 1px solid #7B7B7B;
+}
+
+.introduction-area {
+    width: 100%;
+    display: flex;
+    height: auto;
+}
+
+/*
+.react-introduction-area {
+    width: 100%;
+    display: flex;
+    height: 500px;
+    margin-bottom: 100px;
+}
+*/
+
+.main-right {
+    width: 100%;
+    height: 750px;
+}
+
+/*
+.react-main-right {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+*/
+
+.other-main-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.self-icon {
+    display: block;
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 15px;
+}
+
+.socialLink {
+    margin-left: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.socialLink .title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.githubLink {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.githubLink i {
+    color: #222222;
+}
+
+.githubLink .github-url {
+    color: lightskyblue;
+    border-bottom: 1px solid #7B7B7B;
+}
+
+.mailLink {
+    display: flex;
+    align-items: center;
+}
+
+.mailLink i {
+    color: #7B7B7B;
+}
+
+.app-area {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.app-area p {
+    margin-right: 10px;
+}
+
+.app-link {
+    color: lightskyblue;
+    border-bottom: 1px solid #7B7B7B;
+}
+
+/* 左側のコンテンツ */
+.main-left {
+    width: 100%;
+    height: 750px;
+}
+
+.app-main-left {
+    width: 100%;
+    height: 700px;
+}
+
+.react-main-left {
+    width: 100%;
+    height: 600px;
+}
+
+.other-main-left {
+    width: 70%;
+    height: 700px;
+}
+
+.personal-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-top {
+    display: flex;
+    align-items: center;
+}
+
+.personal-top h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.personal-text {
+    margin-left: 80px;
+    color: #7B7B7B;
+    margin-bottom: 50px;
+}
+
+.carrier-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.carrier-top {
+    display: flex;
+    align-items: center;
+}
+
+.carrier-top h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;  
+}
+
+.carrier-text {
+    margin-left: 80px;
+    margin-bottom: 50px;
+}
+
+.carrier-text li {
+    margin-bottom: 10px;
+}
+
+.carrier-text li span {
+    margin-left: 20px;
+    border-bottom: 1px solid #7B7B7B;
+}
+
+.learn-area {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.learn-top {
+    display: flex;
+    align-items: center;
+}
+/* 
+.learn-bottom {
+    font-size: 16px;
+    margin-left: 80px;
+    margin-top: 10px;
+} */
+
+.learn-area h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;  
+}
+
+.learn-area h1 span {
+    margin-left: 10px;
+}
+
+.learn-area ul {
+    margin-left: 80px;
+}
+
+.learn-area ul li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.app-name {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid #7B7B7B;
+    height: 50px;
+    width: 250px;
+    line-height: 50px;
+    letter-spacing: 7px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.app-name-2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid #7B7B7B;
+    height: 50px;
+    width: 300px;
+    line-height: 50px;
+    letter-spacing: 7px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.app-time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.app-time h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.app-section {
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 50px; */
+}
+
+.app-section h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.text-list {
+    margin-bottom: 50px;
+}
+
+.text-list li {
+    color: #7B7B7B;
+    margin-bottom: 10px;
+    margin-left: 80px;
+}
+
+.other-main-left ul {
+    margin-bottom: 50px;
+}
+
+.other-main-left ul li {
+    color: #7B7B7B;
+    margin-bottom: 10px;
+    margin-left: 80px;
+}
+
+footer {
+    border-top: 1px solid #7B7B7B;
+    height: 50px;
+    text-align: center;
+}
+
+footer p {
+    line-height: 50px;
+    font-weight: bold;
+}
+
+ /* レスポンシブデザイン */
+@media (max-width: 480px) {
+    .typed {
+    font-size: 20px;
+    }
+
+    .right-content {
+        display: none;
+    }
+    
+    .icon-wrapper {
+        display: block;
+        cursor: pointer;
+        z-index: 200;
+    }
+    
+    .icon-item {
+        height: 4px;
+        width: 30px;
+        background-color: #FFF;
+        border-radius: 25px;
+        margin-bottom: 5px;
+        margin-right: 15px;
+    }
+    
+    .content-nav {
+        display: block;
+        width: 200px;
+        height: 100vh;
+        margin-right: -200px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 200; /*最前面に*/
+        background-color: #FFF;
+    }
+    
+    .content-nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .content-list {
+        width: 100%;
+        margin-top: 30px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+    
+    .content-list:hover {
+        background-color: #222222;
+        transition-duration: 0.5s;
+        color: #FFF;
+        /* box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+        outline-color: transparent;
+        outline-offset: 12px;
+        text-shadow: 2px 2px 3px #000; */
+    }
+    
+    #js-nav-close {
+        display: none; /*はじめは隠しておく*/
+        position: fixed;
+        z-index: 150;
+        top: 0; /*全体に広がるように*/
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.5;
+        transition: 0.2s ease-in-out;
+    }
+    
+    main {
+        padding: 10px;
+    }
+    
+    .main-right {
+        height: 750px;
+    }
+    
+    .section {
+        margin-bottom: 250px;
+    }
+    
+    .introduction-area {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .carrier-text {
+        margin-left: 40px;
+    }
+
+    .learn-bottom {
+        font-size: 16px;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+
+    .learn-area h1 {
+        font-size: 15px;
+    }
+    
+    .self-icon {
+        width: 200px;
+        height: 250px;
+    }
+
+    .socialLink  {
+        margin-left: 60px;
+    }
+
+    .githubLink {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .socialLink .title {
+        font-size: 15px;
+    }
+    
+    .app-area {
+        font-size: 15px;
+    }
+    
+    .app-main-left {
+        margin-top: 200px;
+        width: 100%;
+        height: 700px;
+    }
+    
+    .text-list li {
+        margin-left: 40px;
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .other-main-left {
+        margin-top: 100px;
+        width: 70%;
+        height: 700px;
+    }
+}
